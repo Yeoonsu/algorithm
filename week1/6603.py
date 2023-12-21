@@ -1,9 +1,15 @@
-from itertools import combinations
+import itertools
 
-s = list(map(int, input().split()))
-n = s[0]
+while True:
 
-for i in range(7, n+1):
-    comb = list(combinations(s[1:], i))
-    if len(comb) == n:
-        print(comb)
+    array = list(map(int, input().split()))
+
+    k = array[0]
+    s = array[1:]
+
+    for i in itertools.combinations(s, 6):
+        print(*i)
+    
+    if k == 0:
+        exit()
+    print()
