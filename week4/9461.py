@@ -1,8 +1,12 @@
+import sys
+input = sys.stdin.readline
 
-def pado(n):
-    n = [n-3] + [n-2]
-    return n
+N = int(input())
+arr = [int(input()) for _ in range(N)]
+seq = [1, 1, 1, 2, 2]
 
-T = int(input())
-for i in range(T+1):
-    print(pado(T))
+for i in range(5, max(arr)):
+    seq.append(seq[i-1]+seq[i-5])
+
+for i in arr:
+    print(seq[i-1])
