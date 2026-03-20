@@ -1,5 +1,5 @@
-# algorithm
+# Algorithm
 The study for coding test.
 
-reference :
+Reference :  
 https://dev-dain.tistory.com/m/155
